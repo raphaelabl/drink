@@ -1,3 +1,3 @@
 export const environment = {
-  baseUrl: "https://sauf.buam.at/api"
+  baseUrl: "https://sauf.buam.at"
 };
