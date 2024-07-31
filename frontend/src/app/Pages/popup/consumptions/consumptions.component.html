@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Getränk</th>
+        <th>Preis/Stück</th>
+        <th>Anzahl</th>
+        <th>Gesamt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of consumptions.consumptions" (dblclick)="addOne(c)">
+        <td>{{c.drink.name}}</td>
+        <td>{{c.drink.price}}€</td>
+        <td>{{c.amount}}</td>
+        <td>{{c.amount * c.drink.price}}€</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

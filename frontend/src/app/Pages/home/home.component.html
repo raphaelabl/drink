@@ -1,0 +1,33 @@
+<div class="row" style="display: flex; justify-content: space-between">
+
+  <div class="col-4">
+    <h3>Suche nach Besuch an:</h3>
+    <div class="selection-container">
+      <select [(ngModel)]="selectedLocation" class="form-select custom-select" size="10" aria-label="size 10 select example">
+        <option *ngFor="let l of selectionLocations" [disabled]="isVisited(l)" class="custom-button" [value]="l.id">{{ l.name }} {{ l.hostName }}</option>
+      </select>
+      <button class="btn btn-outline-secondary custom-button" (click)="sendLocationRequest()">Anfragen</button>
+    </div>
+  </div>
+  <div class="col-6">
+    <h3>Deine Besuche:</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Da Wirt</th>
+        <th>€ Gesamt</th>
+        <th>weiters</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let loc of locations" (dblclick)="openConsumptions(loc.id,loc.consumptions)">
+        <td>{{loc.name}}</td>
+        <td>{{loc.hostName}}</td>
+        <td>{{getTotalConsumptionPrice(loc.consumptions)}}</td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

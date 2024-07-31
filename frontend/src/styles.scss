@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: #222;
+    padding: 15px;
+}
+
+.headerLink, .headerLink:link, .headerLink:active, .headerLink:visited{
+    text-decoration: none;
+    color: #ededed;
+    font-size: 12pt;
+    padding: 5px;
+}
+
+.headerLink:hover{
+    text-decoration: underline;
+    color: #ccc;
+}
+
+a.logoLink:link, a.logoLink:active, a.logoLink:visited{
+    text-decoration: none;
+    color: lightblue;
+    font-size: 18pt;
+    padding: 5px;
+}
+
+a.logoLink:hover{
+    color: #266ACE;
+}
+
+.session-container{
+  display: flex;
+  align-items: center;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

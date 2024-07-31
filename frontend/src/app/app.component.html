@@ -1,0 +1,27 @@
+<header>
+    <div>
+        <a *ngIf="isLoggedIn" class="logoLink" routerLink="/home">Buam</a>
+        <a *ngIf="!isLoggedIn" class="logoLink" routerLink="/">Buam</a>
+    </div>
+    <div *ngIf="!isLoggedIn" class="session-container">
+        <a class="headerLink" routerLink="/">Login</a>
+        <a class="headerLink" routerLink="/register">Register</a>
+    </div>
+    <div *ngIf="isLoggedIn" class="session-container">
+      <a  class="headerLink" routerLink="/home">Übesicht</a>
+
+      <div  class="btn-group">
+        <a class="headerLink dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button">Verwaltung</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/drink">Getränke</a></li>
+          <li><a class="dropdown-item" routerLink="/location">Locations</a></li>
+          <li><a class="dropdown-item" routerLink="/settings">Einstellungen</a></li>
+        </ul>
+      </div>
+
+      <a class="headerLink" routerLink="/logout">Logout</a>
+    </div>
+</header>
+<div class="container pt-5">
+    <router-outlet></router-outlet>
+</div>
