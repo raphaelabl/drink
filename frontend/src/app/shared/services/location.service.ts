@@ -53,7 +53,7 @@ export class LocationService {
             ...consumption,
             drink: consumption.expand ? consumption.expand.drink : null
           } as ConsumptionModel;
-        }).filter((element: ConsumptionModel) => element.consumer.id === userId) : []
+        }).filter((element: ConsumptionModel) => element.consumer === userId) : []
       } as LocationConsumptionModel;
     });
   }
