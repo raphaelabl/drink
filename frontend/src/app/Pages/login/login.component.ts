@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule, FormsModule, HomeComponent],
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   styles: ``
 })
 export class LoginComponent {
@@ -28,7 +29,7 @@ export class LoginComponent {
       }else{
         this.displayErrorMessage = true;
       }
-    } 
+    }
   )
   }
 

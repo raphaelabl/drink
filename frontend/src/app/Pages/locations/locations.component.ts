@@ -15,6 +15,7 @@ import {VisitRequestService} from "../../shared/services/visit-request.service";
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './locations.component.html',
+  styleUrls: ["./location.component.scss"],
   styles: ``
 })
 export class LocationsComponent implements OnInit{

@@ -10,6 +10,7 @@ import { RecordModel } from 'pocketbase';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
   styles: ``
 })
 export class RegisterComponent implements OnInit{

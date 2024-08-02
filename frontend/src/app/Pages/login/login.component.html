@@ -1,8 +1,20 @@
-<div class="col-4 offset-4">
-    <div class="col-8">
-        <input type="text" [(ngModel)]="emailAddress" placeholder="Email Address" class="m-1 form-control" />
-        <input type="password" [(ngModel)]="password" placeholder="Password" class="m-1 form-control" />
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="card mt-5">
+        <div class="card-body">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="emailAddress" placeholder="Email Address" class="form-control mb-3" />
+          </div>
+          <div class="form-group">
+            <input type="password" [(ngModel)]="password" placeholder="Password" class="form-control mb-3" />
+          </div>
+          <div class="d-grid">
+            <button type="button" class="btn btn-success" [disabled]="emailAddress=='' || password==''" (click)="login()">Login</button>
+          </div>
+          <div *ngIf="displayErrorMessage" class="alert alert-danger mt-3">An error occurred during login. Please try again.</div>
+        </div>
+      </div>
     </div>
-    <div class="col-2"><button type="button" class="btn btn-sm btn-outline-success m-1" [disabled]="emailAddress=='' || password==''" (click)="login()">Login</button></div>
-    <div *ngIf="displayErrorMessage" class="col-12 bg-danger">An error occurred during login. Please try again.</div>
+  </div>
 </div>
